@@ -1,0 +1,163 @@
+// ─────────────────────────────────────────────────────────────
+// Responsive overrides & reduced-motion support
+// ─────────────────────────────────────────────────────────────
+
+// ── Accessibility: reduced motion ─────────────────────────────
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .progress-bar,
+  .slide-inner,
+  .slide-inner > *,
+  .jump-button,
+  .nav-link {
+    transition: none;
+  }
+
+  .slide:not(.is-active) .slide-inner > * {
+    opacity: 1;
+    transform: none;
+  }
+
+  .slide-inner {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+// ── Tablet / narrow desktop (≤ 1100px) ────────────────────────
+
+@media (max-width: 1100px) {
+  .rail {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: auto;
+    margin: 16px;
+  }
+
+  .deck {
+    margin-left: 0;
+    padding: 0 16px 16px;
+  }
+
+  .slide-indicator {
+    top: auto;
+    right: 16px;
+    bottom: 84px;
+  }
+
+  .slide {
+    min-height: auto;
+    padding-bottom: 16px;
+  }
+
+  .slide-inner {
+    width: 100%;
+  }
+
+  // Collapse all multi-column grids to single column
+  .hero-grid,
+  .stat-strip,
+  .compare-columns,
+  .overlap-layout,
+  .score-grid,
+  .fit-grid,
+  .outro-layout,
+  .table-row {
+    grid-template-columns: 1fr;
+  }
+
+  .overlap-core {
+    min-height: 38rem;
+    padding: 2rem 0;
+  }
+
+  .ring {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .ring-left {
+    left: 50%;
+    transform: translate(-66%, -50%);
+  }
+
+  .ring-right {
+    right: auto;
+    left: 50%;
+    transform: translate(-34%, -50%);
+  }
+
+  .ring-center {
+    width: min(22rem, 88%);
+  }
+}
+
+// ── Mobile (≤ 700px) ──────────────────────────────────────────
+
+@media (max-width: 700px) {
+  body {
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5F8 100%);
+  }
+
+  .rail nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .slide-indicator {
+    left: 16px;
+    right: 16px;
+    bottom: 76px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.15rem;
+  }
+
+  .slide-inner {
+    padding: 1.35rem;
+  }
+
+  .fit-card {
+    min-height: auto;
+  }
+
+  .ring {
+    width: 14rem;
+    height: 14rem;
+    padding-top: 1.4rem;
+  }
+
+  .overlap-core {
+    min-height: 30rem;
+  }
+
+  .ring-left {
+    transform: translate(-70%, -50%);
+  }
+
+  .ring-right {
+    transform: translate(-30%, -50%);
+  }
+
+  .ring-center {
+    width: min(18rem, 92%);
+    padding: 1.2rem;
+  }
+
+  .jump-button {
+    right: 16px;
+    bottom: 16px;
+  }
+}

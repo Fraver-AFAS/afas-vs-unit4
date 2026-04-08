@@ -1,0 +1,91 @@
+// ─────────────────────────────────────────────────────────────
+// Badges & chip rows: chip containers, individual pills,
+// winner badges, and pill grids
+// ─────────────────────────────────────────────────────────────
+
+@use 'mixins' as *;
+
+// ── Chip row containers ───────────────────────────────────────
+
+.chip-row,
+.compare-points,
+.visual-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.chip-row {
+  margin-top: 1rem;
+
+  &.dense {
+    margin-top: 0.9rem;
+  }
+}
+
+.compare-points {
+  margin-top: 1rem;
+}
+
+// ── Individual chips ──────────────────────────────────────────
+
+.chip-row span,
+.compare-points span,
+.visual-list span {
+  @include pill-badge(500);
+}
+
+// AFAS-branded cards: override to ensure consistent AFAS token usage
+.afas-card .chip-row span,
+.compare-card.accent-afas .compare-points span,
+.fit-afas .winner {
+  background: var(--badge-bg);
+  border-color: var(--badge-border);
+  color: var(--badge-text);
+  font-weight: 600;
+}
+
+// ── Winner badges ─────────────────────────────────────────────
+
+.winner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.75rem;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+
+.winner-afas {
+  background: var(--badge-bg);
+  border-color: var(--badge-border);
+  color: var(--badge-text);
+}
+
+.winner-unit4 {
+  background: var(--badge-neutral-bg);
+  border-color: var(--badge-neutral-border);
+  color: var(--badge-neutral-text);
+}
+
+// ── Pill grid (conclusion slide) ──────────────────────────────
+
+.pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    @include pill-badge(600, false);
+  }
+}

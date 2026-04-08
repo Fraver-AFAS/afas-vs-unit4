@@ -1,0 +1,22 @@
+// ─────────────────────────────────────────────────────────────
+// Shared SASS mixins
+// ─────────────────────────────────────────────────────────────
+
+/// Pill-shaped badge / chip using the badge design tokens.
+/// @param {Number} $weight [500] - font-weight value
+/// @param {Boolean} $min-height [true] - whether to include a minimum height
+@mixin pill-badge($weight: 500, $min-height: true) {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.85rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  font-weight: $weight;
+  white-space: nowrap;
+
+  @if $min-height {
+    min-height: 2.5rem;
+  }
+}

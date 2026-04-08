@@ -1,0 +1,28 @@
+// ─────────────────────────────────────────────────────────────
+// Slide 05 — Keuzehulp
+// 3-column fit grid with AFAS / Unit4 recommendation cards
+// ─────────────────────────────────────────────────────────────
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.fit-card {
+  min-height: 14rem;
+  justify-content: space-between;
+
+  h3 {
+    max-width: 14ch;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: var(--muted);
+    font-weight: 500;
+  }
+}

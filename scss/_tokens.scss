@@ -1,0 +1,58 @@
+// ─────────────────────────────────────────────────────────────
+// Design tokens — all CSS custom properties live here.
+// ─────────────────────────────────────────────────────────────
+
+:root {
+  // ── Backgrounds & surfaces ─────────────────────────────────
+  --bg: #F2F5F8;
+  --bg-soft: #FFFFFF;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-card: rgba(255, 255, 255, 0.96);
+  --surface-subtle: #F7FAFD;
+
+  // ── Text ───────────────────────────────────────────────────
+  --ink: #41474D;
+  --ink-strong: #1A1F24;
+  --muted: #41474D;
+
+  // ── AFAS brand ─────────────────────────────────────────────
+  --afas: #005FAA;
+  --afas-dark: #0074D0;
+  --afas-soft: rgba(0, 95, 170, 0.1);
+  --afas-soft-strong: rgba(0, 95, 170, 0.18);
+
+  // ── Accents ────────────────────────────────────────────────
+  --accent-orange: #F59F39;
+  --accent-green: #3CC658;
+
+  // ── Borders ────────────────────────────────────────────────
+  --line: rgba(65, 71, 77, 0.1);
+  --line-strong: rgba(0, 95, 170, 0.16);
+  --line-neutral: rgba(65, 71, 77, 0.16);
+
+  // ── Badges — AFAS / blue ───────────────────────────────────
+  --badge-bg: #D7EAFF;
+  --badge-border: #90BFEA;
+  --badge-text: #005FAA;
+
+  // ── Badges — neutral / Unit4 ───────────────────────────────
+  --badge-neutral-bg: #EEF2F6;
+  --badge-neutral-border: #C3CBD3;
+  --badge-neutral-text: #1A1F24;
+
+  // ── Card tints ─────────────────────────────────────────────
+  --card-tint-afas: rgba(0, 95, 170, 0.06);
+  --card-tint-neutral: rgba(195, 203, 211, 0.14);
+
+  // ── Elevation ──────────────────────────────────────────────
+  --shadow: 0 24px 80px rgba(0, 95, 170, 0.12);
+
+  // ── Border radii ───────────────────────────────────────────
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+
+  // ── Layout ─────────────────────────────────────────────────
+  --max-width: 1280px;
+}

@@ -1,0 +1,154 @@
+// ─────────────────────────────────────────────────────────────
+// Navigation: sidebar rail, nav links, slide indicator,
+// presenter toggle, and jump button
+// ─────────────────────────────────────────────────────────────
+
+// ── Sidebar rail ──────────────────────────────────────────────
+
+.rail {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  bottom: 24px;
+  width: 220px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  z-index: 10;
+}
+
+.brand-lockup {
+  p {
+    margin: 0;
+    color: var(--afas);
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+}
+
+// ── Navigation links ──────────────────────────────────────────
+
+nav {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.nav-link {
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  text-decoration: none;
+  transition: 180ms ease;
+
+  &:hover,
+  &.active {
+    background: var(--afas-soft);
+    color: var(--ink);
+  }
+}
+
+// ── Presenter controls ────────────────────────────────────────
+
+.presenter-tip {
+  display: grid;
+  gap: 0.8rem;
+
+  span {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+}
+
+.presenter-toggle {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(0, 95, 170, 0.08));
+  color: var(--afas);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.8rem 0.9rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    background: linear-gradient(180deg, rgba(0, 95, 170, 0.18), rgba(255, 255, 255, 0.95));
+  }
+}
+
+// ── Slide indicator ───────────────────────────────────────────
+
+.slide-indicator {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  z-index: 12;
+
+  strong,
+  span:not(.slide-indicator-index) {
+    display: block;
+  }
+
+  strong {
+    font-size: 0.98rem;
+  }
+}
+
+.slide-indicator-index {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--afas) 0%, var(--afas-dark) 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  flex: 0 0 3rem;
+}
+
+.slide-indicator-state {
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+// ── Jump button ───────────────────────────────────────────────
+
+.jump-button {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 11;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  background: var(--afas);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  white-space: nowrap;
+
+  &:hover {
+    background: #000;
+  }
+}

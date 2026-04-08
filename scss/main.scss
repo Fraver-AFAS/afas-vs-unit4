@@ -1,0 +1,55 @@
+// ─────────────────────────────────────────────────────────────
+// main.scss — entry point
+//
+// Import order follows the ITCSS (Inverted Triangle CSS) model:
+//   1. Settings / tokens      → custom properties
+//   2. Tools / mixins         → SASS utilities (no CSS output)
+//   3. Base / reset           → bare HTML elements
+//   4. UI chrome              → fixed decorative elements
+//   5. Navigation shell       → sidebar, indicator, jump button
+//   6. Layout                 → deck, slide frame, animations
+//   7. Typography & labels    → text styles, pills
+//   8. Components             → badges, cards
+//   9. Slide-specific content → one partial per slide
+//  10. Patterns               → presenter mode overlay
+//  11. Responsive             → breakpoint overrides
+// ─────────────────────────────────────────────────────────────
+
+// ── 1. Settings ───────────────────────────────────────────────
+@use 'tokens';
+
+// ── 2. Tools (no CSS output) ──────────────────────────────────
+@use 'mixins';
+
+// ── 3. Base ───────────────────────────────────────────────────
+@use 'base';
+
+// ── 4. Chrome ─────────────────────────────────────────────────
+@use 'chrome';
+
+// ── 5. Navigation ─────────────────────────────────────────────
+@use 'navigation';
+
+// ── 6. Layout ─────────────────────────────────────────────────
+@use 'layout';
+
+// ── 7. Typography & labels ────────────────────────────────────
+@use 'typography';
+
+// ── 8. Components ─────────────────────────────────────────────
+@use 'badges';
+@use 'cards';
+
+// ── 9. Slide content ──────────────────────────────────────────
+@use 'slide-hero';
+@use 'slide-positioning';
+@use 'slide-overlap';
+@use 'slide-differences';
+@use 'slide-decision';
+@use 'slide-conclusion';
+
+// ── 10. Patterns ──────────────────────────────────────────────
+@use 'presenter';
+
+// ── 11. Responsive ────────────────────────────────────────────
+@use 'responsive';

@@ -1,0 +1,40 @@
+// ─────────────────────────────────────────────────────────────
+// Slide 01 — Intro (Hero)
+// stat-strip + two-column hero grid
+// ─────────────────────────────────────────────────────────────
+
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin-top: 1.4rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  div {
+    padding: 1rem 1.1rem;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, #FFFFFF, var(--surface-subtle));
+    border: 1px solid var(--line-strong);
+    display: grid;
+    gap: 0.3rem;
+    text-align: center;
+  }
+
+  strong {
+    color: var(--afas);
+    font-size: 1.05rem;
+  }
+
+  span {
+    color: var(--muted);
+  }
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}

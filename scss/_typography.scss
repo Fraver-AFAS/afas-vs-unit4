@@ -1,0 +1,66 @@
+// ─────────────────────────────────────────────────────────────
+// Typography: lead text, eyebrow chips, brand labels, label pill
+// ─────────────────────────────────────────────────────────────
+
+.lead {
+  max-width: 62ch;
+  margin-top: 1.2rem;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--muted);
+
+  &.strong {
+    color: var(--ink);
+    font-size: 1.25rem;
+  }
+}
+
+// ── Pill labels ───────────────────────────────────────────────
+
+.brand-pill,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: #D7EAFF;
+  color: #005FAA;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.brand-ribbon {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--afas) 0%, var(--afas-dark) 100%);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+// ── Card label (AFAS / Unit4 identity chip inside a card) ─────
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--badge-bg);
+  border: 1px solid var(--badge-border);
+  color: var(--badge-text);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
