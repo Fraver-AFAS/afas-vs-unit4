@@ -1,0 +1,111 @@
+// ─────────────────────────────────────────────────────────────
+// Slide — Unit4 visueel (concurrent-analyse intro)
+// Logo display, sector icons, revenue comparison
+// ─────────────────────────────────────────────────────────────
+
+.unit4-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.unit4-logo-display {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(3.5rem, 7.5vw, 5.5rem);
+  color: #1A1F24;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #E8733A 0%, #C45A22 100%);
+    border-radius: 3px;
+    margin-top: 0.4rem;
+  }
+}
+
+// ── Sector icons ──────────────────────────────────────────────
+
+.sector-icons {
+  display: flex;
+  gap: 3.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sector-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+
+  span:first-child {
+    font-size: 2.75rem;
+    line-height: 1;
+  }
+}
+
+.sector-label {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+// ── Revenue comparison ────────────────────────────────────────
+
+.revenue-comparison {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem 3rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 8px 32px rgba(0, 95, 170, 0.07);
+}
+
+.revenue-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.revenue-amount {
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1;
+}
+
+.revenue-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.unit4-rev .revenue-amount {
+  color: #1A1F24;
+}
+
+.afas-rev .revenue-amount {
+  color: var(--afas);
+}
+
+.revenue-divider {
+  font-size: 1.3rem;
+  color: var(--muted);
+  font-weight: 300;
+  padding: 0 0.25rem;
+  align-self: center;
+}
