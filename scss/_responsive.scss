@@ -69,6 +69,7 @@
   .overlap-layout,
   .score-grid,
   .fit-grid,
+  .reference-gallery,
   .outro-layout,
   .table-row {
     grid-template-columns: 1fr;
@@ -127,6 +128,11 @@
 
   .slide-inner {
     padding: 1.35rem;
+  }
+
+  .reference-card img,
+  .support-highlight img {
+    max-height: 190px;
   }
 
   .fit-card {

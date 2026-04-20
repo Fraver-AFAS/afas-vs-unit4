@@ -170,3 +170,35 @@
   font-size: 0.88rem;
   flex-shrink: 0;
 }
+
+.reference-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.reference-card {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+  background: var(--surface-card);
+  box-shadow: 0 8px 24px rgba(0, 95, 170, 0.08);
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  figcaption {
+    padding: 0.7rem 0.9rem;
+    font-size: 0.86rem;
+    color: var(--muted);
+    text-align: left;
+  }
+}
