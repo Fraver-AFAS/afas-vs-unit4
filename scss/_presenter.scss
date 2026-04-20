@@ -2,8 +2,12 @@
 // Presenter mode: notes overlay and enhanced slide shadow
 // ─────────────────────────────────────────────────────────────
 
-.presenter-note {
+.presenter-note,
+.card-note {
   display: none;
+}
+
+.presenter-note {
   margin-top: 1.15rem;
   padding: 1rem 1.1rem;
   border-radius: var(--radius-lg);
@@ -15,8 +19,18 @@
   z-index: 1;
 }
 
+.card-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.87rem;
+  color: var(--muted);
+  line-height: 1.55;
+  text-align: left;
+  width: 100%;
+}
+
 body.presenter-mode {
-  .presenter-note {
+  .presenter-note,
+  .card-note {
     display: block;
   }
 
